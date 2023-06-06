@@ -1,0 +1,21 @@
+f65f0259823c53cb6d1e137468710aa5
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.store = exports["default"] = void 0;
+var _toolkit = require("@reduxjs/toolkit");
+var _TaskListApp = _interopRequireDefault(require("../slice/TaskListApp"));
+var _configuration = _interopRequireDefault(require("../slice/configuration"));
+var store = (0, _toolkit.configureStore)({
+  reducer: {
+    tarkReducer: _TaskListApp["default"],
+    configurationapp: _configuration["default"]
+  }
+});
+exports.store = store;
+var _default = store;
+exports["default"] = _default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJfdG9vbGtpdCIsInJlcXVpcmUiLCJfVGFza0xpc3RBcHAiLCJfaW50ZXJvcFJlcXVpcmVEZWZhdWx0IiwiX2NvbmZpZ3VyYXRpb24iLCJzdG9yZSIsImNvbmZpZ3VyZVN0b3JlIiwicmVkdWNlciIsInRhcmtSZWR1Y2VyIiwiY29uZmlndXJhdGlvbmFwcCIsImV4cG9ydHMiLCJfZGVmYXVsdCJdLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNvbmZpZ3VyZVN0b3JlIH0gZnJvbSAnQHJlZHV4anMvdG9vbGtpdCdcclxuaW1wb3J0IHRhcmtSZWR1Y2VyIGZyb20gJy4uL3NsaWNlL1Rhc2tMaXN0QXBwJ1xyXG5pbXBvcnQgY29uZmlndXJhdGlvbmFwcCBmcm9tICcuLi9zbGljZS9jb25maWd1cmF0aW9uJ1xyXG5leHBvcnQgY29uc3Qgc3RvcmUgPSBjb25maWd1cmVTdG9yZSh7XHJcbiAgcmVkdWNlcjoge1xyXG4gICAgIHRhcmtSZWR1Y2VyLFxyXG4gICAgIGNvbmZpZ3VyYXRpb25hcHBcclxuICB9XHJcbn0pXHJcblxyXG5cclxuZXhwb3J0IHR5cGUgUm9vdFN0YXRlID0gUmV0dXJuVHlwZTx0eXBlb2Ygc3RvcmUuZ2V0U3RhdGU+XHJcblxyXG5leHBvcnQgdHlwZSBBcHBEaXNwYXRjaCA9IHR5cGVvZiBzdG9yZS5kaXNwYXRjaFxyXG5cclxuZXhwb3J0IGRlZmF1bHQgc3RvcmUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQSxJQUFBQSxRQUFBLEdBQUFDLE9BQUE7QUFDQSxJQUFBQyxZQUFBLEdBQUFDLHNCQUFBLENBQUFGLE9BQUE7QUFDQSxJQUFBRyxjQUFBLEdBQUFELHNCQUFBLENBQUFGLE9BQUE7QUFDTyxJQUFNSSxLQUFLLEdBQUcsSUFBQUMsdUJBQWMsRUFBQztFQUNsQ0MsT0FBTyxFQUFFO0lBQ05DLFdBQVcsRUFBWEEsdUJBQVc7SUFDWEMsZ0JBQWdCLEVBQWhCQTtFQUNIO0FBQ0YsQ0FBQyxDQUFDO0FBQUFDLE9BQUEsQ0FBQUwsS0FBQSxHQUFBQSxLQUFBO0FBQUEsSUFBQU0sUUFBQSxHQU9hTixLQUFLO0FBQUFLLE9BQUEsY0FBQUMsUUFBQSJ9
