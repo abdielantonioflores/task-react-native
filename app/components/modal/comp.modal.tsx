@@ -34,7 +34,13 @@ const ModalCard: React.FC<ModalProps> = ({ modalVisible, setModalVisible }) => {
                     setModalVisible(!modalVisible);
                 }}>
                 <View style={styles.centeredView}>
+                <Pressable
+                            style={[styles.button, styles.buttonClose]}
+                            onPress={() => setModalVisible(!modalVisible)}>
+                            <Text style={styles.textStyle}>Close</Text>
+                        </Pressable>
                     <View style={styles.modalView}>
+
                         <Text> Agregue su nueva  tarea </Text>
                         <SafeAreaView>
                             <TextInput
