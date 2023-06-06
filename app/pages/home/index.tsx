@@ -11,6 +11,7 @@ interface HomeScreenProps {
 const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
   return (
+    // Componente de home encargado en   alimentar el estado de la aplicacion haciendoi uso de  ProviderAuth  y renderizado de las opciones necesarias para mostrar y crear tareas 
     <ProviderAuth >
       <ButtonsOptions navigation={navigation}></ButtonsOptions>
     </ProviderAuth>

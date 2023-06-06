@@ -11,13 +11,15 @@ interface ModalProps {
 }
 
 const ModalCard: React.FC<ModalProps> = ({ modalVisible, setModalVisible }) => {
+// estado de la aplicacion 
 
     const dataAuth = useAppSelector((state) => {
         return { config: state.configurationapp, task: state.tarkReducer }
     })
+
     const [text, onChangeText] = React.useState('Nombre de la Tarea');
     const dispatch = useAppDispatch();
-
+// funcion para guardar  la tarea nueva 
     const saveTaskInApp = () => {
         let id = dataAuth.task.list.length - 1
         dispatch(setNewTask({ name: text, id: id + 2, avatar: "https://cdn.fakercloud.com/avatars/josep_martins_128.jpg" }))

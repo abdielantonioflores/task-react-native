@@ -9,13 +9,14 @@ interface ProviderAuthProps {
 }
 
 const ProviderAuth: React.FC<ProviderAuthProps> = ({ children }) => {
-
+// Optengo el estado inicial de la aplicacion 
     const dataAuth = useAppSelector((state) => {
         return { config: state.configurationapp, task: state.tarkReducer }
     })
 
     const dispatch = useAppDispatch();
 
+    // Alimento el estado una vez cargue el componente con las tareas 
     useEffect(() => {
 
         dispatch(setIsAutheticate(true))
@@ -23,6 +24,7 @@ const ProviderAuth: React.FC<ProviderAuthProps> = ({ children }) => {
         fetch('https://6172cfe5110a740017222e2b.mockapi.io/elements')
             .then(response => response.json())
             .then(data => {
+                // alimento mi estado de task, guardando la lista  que me retorna este endpoint
                 dispatch(setAddTask(data))
             })
             .catch(error => {
@@ -30,11 +32,13 @@ const ProviderAuth: React.FC<ProviderAuthProps> = ({ children }) => {
             });
     }, [dispatch])
 
-
+// antes de cargar los componente quiero que mi aplicacion cargue mi loading y a lo que este listo el componente renderizar el componente hijo que sea necesario 
     return dataAuth.config.isAuthenticate.value === false ? (
         <View data-testid="providerComp">
+            {/* Component Loading de pre-carga  */}
             <LoadingScreem />
         </View>) : (
+            // renderizado de los componentes hijos 
         <View data-testid="providerComp">
             {children}
         </View>

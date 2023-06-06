@@ -13,11 +13,13 @@ function App() {
     <NavigationContainer fallback={<Text>Cargando Informacion ...</Text>} >
       <Provider store={store}>
         <Stack.Navigator>
+          {/* Component Home -  componete principal  */}
           <Stack.Screen
             name="Home"
             component={HomeScreen}
             options={{ title: 'Lista de Opciones  ' }}
           />
+          {/* Pagina de lista de tareas  */}
           <Stack.Screen name="Task-List" component={TaskList} />
         </Stack.Navigator>
       </Provider>
